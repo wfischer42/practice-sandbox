@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>{{ defaultText }}</p>
+    <p>Hello Embedded Content</p>
   </div>
 </template>
 
