@@ -1,4 +1,10 @@
 module.exports = {
+  configureWebpack: config => {
+    if (process.env.NODE_ENV === "development") {
+      config.optimization.splitChunks.cacheGroups.vendors.chunks = () => false
+      config.optimization.splitChunks.cacheGroups.common.chunks = () => false
+    }
+  },
   pages: {
     popup: {
       template: 'public/browser-extension.html',
